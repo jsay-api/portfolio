@@ -1,6 +1,6 @@
 .DS_Store
 ignore-this/
-vedomosti2/settings/local.py
+portfolio/settings/local.py
 
 
 # Byte-compiled / optimized / DLL files
