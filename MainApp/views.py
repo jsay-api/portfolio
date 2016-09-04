@@ -1,9 +1,7 @@
 from django.shortcuts import render, render_to_response, Http404
 from django.http import Http404, JsonResponse
 from django.template import loader
-from .models import Experience
-from .models import Education
-from .models import Projects
+from .models import *
 import sys
 
 
@@ -52,6 +50,11 @@ def latest_first(request):
 		return JsonResponse(data)
 
 	raise Http404
+
+def skills(request):
+	menu = 'disabled'
+	skills = Skill.objects.all().order_by('id')
+	return render(request, 'skills.html', {"skills": skills, "menu4": menu})
 
 # def notfound(request):
 #     return render(request, '500.html')

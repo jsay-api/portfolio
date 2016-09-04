@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles%}
+
+{% block title %}
+		<title>Skills</title>
+	{% endblock %}
+
+	{% block caption %}
+		<h1 class="col-sm-8">Skills</h1>
+	{% endblock %}
+
+	{% block content %}
+		<div class="container-fluid contacto">
+			<div class="row">
+				<div class="col-md-6 skills">
+					{% for skill in skills %}
+						{% if skill.col == 'left' %}
+							<div class="media col-md-offset-6">
+								<div class="media-left media-middle">
+									<img class="media-object contact" src="{{skill.img}}" alt="{{skill.skill}}">
+								</div>
+								<div class="media-body contacttext">
+									{{skill.skill}}
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="col-md-6 skills">
+					{% for skill in skills %}
+						{% if skill.col == 'right' %}
+							<div class="media col-md-offset-2">
+								<div class="media-left media-middle">
+									<img class="media-object contact" src="{{skill.img}}" alt="{{skill.skill}}">
+								</div>
+								<div class="media-body contacttext">
+									{{skill.skill}}
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			
+		</div>
+		
+
+	{% endblock %}

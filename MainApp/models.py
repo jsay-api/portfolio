@@ -35,5 +35,10 @@ class Projects(models.Model):
 	desc = models.TextField(verbose_name = 'Description')
 	img = models.URLField(verbose_name = 'Image', null=True, blank=True)
 	style = models.CharField(verbose_name = 'CSS Style #', blank = True, max_length = 10)
+
+class Skill(models.Model):
+	skill = models.CharField(verbose_name = 'Skill name', max_length = 100)
+	img = models.URLField(verbose_name = 'Image')
+	col = models.CharField(verbose_name = 'Column: left/right', max_length = 10)
 		
 
