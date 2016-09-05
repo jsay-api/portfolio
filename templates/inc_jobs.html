@@ -10,19 +10,19 @@
 		<h3>{{e.position | linebreaks}}</h3>
 		<p>{{e.duties | linebreaks}}</p>
 			<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div class="media">
-				<div class="media-left media-middle">
-				<div class="map">
-					<img class="media-object ref maps {{e.classname}}" src={% static "img/pin.png" %} alt="map">
-					<span class="{{e.classname}}"><iframe class="dropdown-menu" src="{{e.org.employer_location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></span>
-				</div>
+					<div class="media-left media-middle">
+						<div class="map">
+							<img class="media-object ref maps {{e.classname}}" src={% static "img/pin.png" %} alt="map">
+							<span class="{{e.classname}}"><iframe class="dropdown-menu" src="{{e.org.employer_location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></span>
+						</div>
+					</div>
 
+					<div class="media-body reftext">
+						{{e.org.employer_place}}
+					</div>
 
-				</div>
-				<div class="media-body reftext">
-				{{e.org.employer_place}}
-				</div>
 				</div>
 			</div>
 
