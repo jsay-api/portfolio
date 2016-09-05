@@ -25,5 +25,9 @@ var main = function() {
 	/*console.log(event.currentTarget.classList[4])*/
   	$('.map .class5 .dropdown-menu').toggle();
   });
+  $('.map .class6').click(function(event) {
+  /*console.log(event.currentTarget.classList[4])*/
+    $('.map .class6 .dropdown-menu').toggle();
+  });
 };
 $(document).ready(main);
